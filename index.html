@@ -145,6 +145,112 @@
       </div>
       
      </div>
+
+     <div class="container_form">
+      <h1>Calculadora de Huella de Carbono</h1>
+      <form id="carbonFootprintForm">
+          <label for="electricity">1. Consumo de electricidad (kWh):</label>
+          <input type="number" id="electricity" required>
+
+          <label for="gas">2. Consumo de gas (m³):</label>
+          <input type="number" id="gas" required>
+
+          <label for="miles">3. Millas recorridas en coche:</label>
+          <input type="number" id="miles" required>
+
+          <label for="flights">4. Número de vuelos nacionales al año:</label>
+          <input type="number" id="flights" required>
+
+          <label for="meat">5. Consumo de carne (kg/mes):</label>
+          <input type="number" id="meat" required>
+
+          <label for="dairy">6. Consumo de productos lácteos (kg/mes):</label>
+          <input type="number" id="dairy" required>
+
+          <label for="waste">7. Residuos generados (kg/mes):</label>
+          <input type="number" id="waste" required>
+
+          <label for="water">8. Consumo de agua (litros/mes):</label>
+          <input type="number" id="water" required>
+
+          <label for="publicTransport">9. Uso de transporte público (días/mes):</label>
+          <input type="number" id="publicTransport" required>
+
+          <label for="recycling">10. Porcentaje de reciclaje (%):</label>
+          <input type="number" id="recycling" required>
+
+          <button type="submit">Calcular Huella de Carbono</button>
+      </form>
+
+      <div id="result" class="result"></div>
+      <div id="tip" class="tip"></div>
+      </div>
+
+      <br />
+      <h2 style="text-align: center;">Tipos de Energías Renovables</h2>
+      <br />
+      <main>
+         <section class="energy-type">
+             <h2>Energía Solar</h2>
+             <p>La energía solar se obtiene a partir de la radiación solar. Se puede utilizar para generar electricidad o para calentar agua.</p>
+         </section>
+         <section class="energy-type">
+             <h2>Energía Eólica</h2>
+             <p>La energía eólica se genera a partir del viento. Los aerogeneradores convierten la energía cinética del viento en energía eléctrica.</p>
+         </section>
+         <section class="energy-type">
+             <h2>Energía Hidroeléctrica</h2>
+             <p>La energía hidroeléctrica se produce aprovechando la energía del agua en movimiento, como ríos o presas, para generar electricidad.</p>
+         </section>
+         <section class="energy-type">
+             <h2>Energía Geotérmica</h2>
+             <p>La energía geotérmica se obtiene del calor interno de la Tierra. Se utiliza para generar electricidad y para calefacción.</p>
+         </section>
+         <section class="energy-type">
+             <h2>Energía Biomasa</h2>
+             <p>La biomasa se refiere a la materia orgánica que se puede utilizar como fuente de energía, como residuos agrícolas y forestales.</p>
+         </section>
+     </main>
+     <br /> 
+
+      <div class="container_energyform">
+         <h1>Formulario sobre Energías No Renovables</h1>
+         <form id="energyForm">
+             <label for="electricitySource">1. ¿Cuál es tu principal fuente de electricidad?</label>
+             <select id="electricitySource" required>
+                 <option value="renewable">Energías renovables (solar, eólica, etc.)</option>
+                 <option value="fossil">Fósiles (carbón, gas, petróleo)</option>
+                 <option value="nuclear">Nuclear</option>
+             </select>
+ 
+             <label for="transportation">2. ¿Qué tipo de transporte usas principalmente?</label>
+             <select id="transportation" required>
+                 <option value="public">Transporte público</option>
+                 <option value="car">Coche particular</option>
+                 <option value="bike">Bicicleta</option>
+                 <option value="none">No uso transporte</option>
+             </select>
+ 
+             <label for="heating">3. ¿Qué tipo de calefacción utilizas en casa?</label>
+             <select id="heating" required>
+                 <option value="renewable">Calefacción renovable (biomasa, solar térmica)</option>
+                 <option value="fossil">Calefacción fósil (gas, petróleo)</option>
+                 <option value="electric">Eléctrica (sin especificar fuente)</option>
+             </select>
+ 
+             <label for="appliances">4. ¿Qué tipo de electrodomésticos utilizas?</label>
+             <select id="appliances" required>
+                 <option value="efficient">Eficientes (etiqueta A o superior)</option>
+                 <option value="standard">Estándar</option>
+                 <option value="old">Antiguos</option>
+             </select>
+ 
+             <button type="submit">Calcular</button>
+         </form>
+ 
+         <div id="result_energy" class="result_energy"></div>
+         <div id="cal" class="cal"></div>
+     </div>
      
      <!--=============== SWIPER JS ===============-->
      <script src="assets/js/swiper-bundle.min.js"></script>
