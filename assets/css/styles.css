@@ -552,6 +552,10 @@ select {
 
   .maintext{
     width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
   }
 
   #mainimage{
