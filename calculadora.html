@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style_calculadora.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo" >REN<img class="logo" src="img/logo.png">VABLE </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="menu">
+        <a href="index.html" id="inicio">
+        <img src="img/home.png" alt="Inicio">
+        </a>
+        <a href="#" id="calculadora">  
+          <img src="img/calculadora.png" alt="Calculadora de CO2">
+
+        </a>
+        <a href="plan.html" id="plan">
+        <img src="img/plan.png" alt="Plan 2030 de la ONU">
+          </a>
+        <a href="game.html" id="quiz">
+
+          <img src="img/quiz.png" alt="Preguntas Frecuentes">
+        </a>
+        <a href="faq.html" id="faq">
+
+            <img src="img/faq.png" alt="Quiz">
+          </a>
+    </nav>
+  </header>
+
+    <div class="content">
+        <section class="section calculator">
+          <h2 style="text-align:center">Calculadora de CO₂</h2>
+          <hr>
+          <form id="co2-form">
+            <label for="transporte">¿Cuántos kilómetros recorres en vehículo al día?</label>
+            <input type="number" id="transporte" required>
+      
+            <label for="electricidad">¿Cuántos kWh consumes de electricidad al mes?</label>
+            <input type="number" id="electricidad" required>
+      
+            <label for="plastica">¿Cuánto plástico desechas por semana? (en kg)</label>
+            <input type="number" id="plastica" required>
+      
+            <label for="comida">¿Consumes carne roja cuántas veces por semana?</label>
+            <input type="number" id="comida" required>
+      
+            <label for="viajes">¿Cuántos vuelos tomas al año?</label>
+            <input type="number" id="viajes" required>
+      
+            <label for="energia-renovable">¿Cuánta energía renovable utilizas (%)?</label>
+            <input type="number" id="energia-renovable" required>
+      
+            <label for="reciclaje">¿Cuántos kg reciclas al mes?</label>
+            <input type="number" id="reciclaje" required>
+      
+            <button type="button" id="calcular" onclick="calcularCO2()">Calcular</button>
+          </form>
+        </section>
+      </div>
+      
+      <script>
+        function calcularCO2() {
+          const transporte = document.getElementById('transporte').value;
+          const electricidad = document.getElementById('electricidad').value;
+          const plastica = document.getElementById('plastica').value;
+          const comida = document.getElementById('comida').value;
+          const viajes = document.getElementById('viajes').value;
+          const energiaRenovable = document.getElementById('energia-renovable').value;
+          const reciclaje = document.getElementById('reciclaje').value;
+      
+          // Sumar emisiones estimadas
+          const totalEmisiones = 
+            (transporte * 2.3) + 
+            (electricidad * 0.7) + 
+            (plastica * 6) + 
+            (comida * 4.5) + 
+            (viajes * 50) -
+            (energiaRenovable * 1.5) -
+            (reciclaje * 2);
+      
+          let mensaje = '';
+          if (totalEmisiones < 200) {
+            mensaje = `Tus emisiones son bajas (${totalEmisiones.toFixed(2)} kg CO₂). ¡Sigue así!`;
+          } else if (totalEmisiones < 500) {
+            mensaje = `Tus emisiones son moderadas (${totalEmisiones.toFixed(2)} kg CO₂). Considera implementar más energía renovable.`;
+          } else {
+            mensaje = `Tus emisiones son altas (${totalEmisiones.toFixed(2)} kg CO₂). Aquí tienes algunos tips para reducirlas: Usa transporte público, consume energía solar y recicla.`;
+          }
+      
+          alert(mensaje);
+        }
+
+        
+      </script>
+      <script src="index.js"></script>
+
+      
+      
+</body>
+</html>

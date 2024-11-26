@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas frecuentes</title>
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+  <header>
+    <div class="logo" >REN<img class="logo" src="img/logo.png">VABLE </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="menu">
+        <a href="index.html" id="inicio">
+        <img src="img/home.png" alt="Inicio">
+        </a>
+        <a href="calculadora.html" id="calculadora">  
+          <img src="img/calculadora.png" alt="Calculadora de CO2">
+
+        </a>
+        <a href="plan.html" id="plan">
+        <img src="img/plan.png" alt="Plan 2030 de la ONU">
+          </a>
+        <a href="game.html" id="quiz">
+
+          <img src="img/quiz.png" alt="Preguntas Frecuentes">
+        </a>
+        <a href="#" id="faq">
+
+            <img src="img/faq.png" alt="Quiz">
+          </a>
+    </nav>
+  </header>
+
+
+      <div class="content">
+        <section class="section">
+          <h2>Preguntas Frecuentes</h2>
+          <hr >
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Qué es la energía renovable?</button>
+            <div>La energía renovable proviene de recursos naturales como el sol, viento y agua, los cuales se regeneran constantemente.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Cuáles son los beneficios de la energía renovable?</button>
+            <div>Reduce las emisiones de carbono, disminuye la dependencia de combustibles fósiles y protege el medio ambiente.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Por qué es importante cambiar a energías renovables?</button>
+            <div>Cambiar a energías renovables es crucial para reducir las emisiones de gases de efecto invernadero, mitigar el cambio climático y disminuir la contaminación del aire. Además, las energías renovables son inagotables y pueden proporcionar una fuente de energía sostenible a largo plazo.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Cuáles son los tipos de energías renovables más comunes?</button>
+            <div>Los tipos más comunes de energías renovables incluyen la energía solar (fotovoltaica y térmica), la energía eólica, la energía hidroeléctrica, la energía geotérmica y la biomasa.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Es caro cambiar a energías renovables?</button>
+            <div>Aunque la inversión inicial en tecnologías de energías renovables puede ser alta, a largo plazo, estas tecnologías pueden resultar más económicas debido a los bajos costos operativos y de mantenimiento. Además, muchos gobiernos ofrecen incentivos y subsidios para fomentar la adopción de energías renovables.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Cómo puedo cambiar la fuente de energía de mi casa a una más sostenible?</button>
+            <div>Puedes cambiar a una fuente de energía más sostenible instalando paneles solares, utilizando sistemas de energía eólica o aprovechando la energía geotérmica, dependiendo de las condiciones geográficas de tu ubicación. Es recomendable consultar con un especialista para determinar la mejor opción para tu hogar.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Las energías renovables pueden satisfacer toda la demanda energética?</button>
+            <div>Con el consumo de energía actual, es posible que las energías renovables no puedan satisfacer toda la demanda energética de inmediato. Sin embargo, combinando la adopción de energías renovables con la reducción del consumo energético y la mejora de la eficiencia energética, podemos avanzar hacia un sistema energético más sostenible.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Qué desafíos enfrenta la adopción de energías renovables?</button>
+            <div>Algunos desafíos incluyen el costo inicial de instalación, la necesidad de infraestructura adecuada, la intermitencia de algunas fuentes de energía (como la solar y la eólica) y la resistencia al cambio por parte de industrias y consumidores acostumbrados a los combustibles fósiles.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Cómo afectan las energías renovables a la economía?</button>
+            <div>Las energías renovables pueden estimular la economía al crear empleos en la fabricación, instalación y mantenimiento de tecnologías limpias. Además, pueden reducir los costos de energía a largo plazo y disminuir la dependencia de importaciones de combustibles fósiles.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Qué papel juegan los gobiernos en la promoción de energías renovables?</button>
+            <div>Los gobiernos pueden promover las energías renovables mediante políticas y regulaciones favorables, incentivos fiscales, subsidios y programas de investigación y desarrollo. También pueden establecer metas y mandatos para el uso de energías limpias.</div>
+          </div>
+          <div class="faq-item">
+            <button onclick="toggleFAQ(this)">¿Cómo pueden las empresas beneficiarse de las energías renovables?</button>
+            <div>Las empresas pueden reducir sus costos operativos a largo plazo, mejorar su reputación y cumplir con regulaciones ambientales al adoptar energías renovables. Además, pueden atraer a consumidores y empleados que valoran la sostenibilidad.</div>
+          </div>
+
+        </section>
+      </div>
+      
+      
+
+      <script>
+        function toggleFAQ(button) {
+          const content = button.nextElementSibling;
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+      </script>
+
+      
+      <script src="index.js"></script>
+</body>
+</html>

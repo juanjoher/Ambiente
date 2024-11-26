@@ -4,261 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energia renovable</title>
-    <header id="header">Energia renovable</header>
-     
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=solar_power" /> -->
     
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
-
-    
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
 <body>
-   <hr>
-    <div id="main">
-        <div id="mainimagediv"><img id="mainimage" src="MainImage.png" alt="Eco"></div>
-        <div class="maintext"> El ambiente es el conjunto de elementos naturales y artificiales que nos rodean y con los que interactuamos diariamente. Incluye factores bióticos, como plantas, animales y microorganismos, y factores abióticos, como el aire, el agua y el suelo. Además, abarca elementos creados por el ser humano, como edificios y carreteras.</div>
+  <header>
+    <div class="logo" >REN<img class="logo" src="img/logo.png">VABLE </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+    <nav id="menu">
+        <a href="#" id="inicio">
+        <img src="img/home.png" alt="Inicio">
+        </a>
+        <a href="calculadora.html" id="calculadora">  
+          <img src="img/calculadora.png" alt="Calculadora de CO2">
 
-    <section class="container">
-        <div class="card__container swiper">
-           <div class="card__content">
-              <div class="swiper-wrapper">
-                 <article class="card__article swiper-slide">
-                    <div class="card__image">
-                     
-                       <img src="assets/img/recycling.png" alt="image" class="card__img">
-                       <div class="card__shadow"></div>
-                    </div>
-     
-                    <div class="card__data">
-                       <h3 class="card__name">Reduce, reutiliza y recicla</h3>
-                       <p class="card__description">
-                        Intenta reducir la cantidad de residuos que generas, 
-                        reutiliza objetos siempre que puedas y recicla materiales como papel,
-                         vidrio y plástico.
-                       </p>
-     
-                       
-                    </div>
-                 </article>
-     
-                 <article class="card__article swiper-slide">
-                    <div class="card__image">
-                     <br />
-                       <img src="assets/img/energy.png" alt="image" class="card__img">
-                       <div class="card__shadow"></div>
-                    </div>
-                   
-     
-                    <div class="card__data">
-                       <h3 class="card__name">Ahorra energía</h3>
-                       <p class="card__description">
-                        Apaga las luces y los aparatos electrónicos cuando no los estés usando.
-                         Utiliza bombillas de bajo consumo o LED.
-                       </p>
-     
-               
-                    </div>
-                 </article>
-     
-                 <article class="card__article swiper-slide">
-                    <div class="card__image">
-                       <img src="assets/img/transport.png" alt="image" class="card__img">
-                       <div class="card__shadow"></div>
-                       <br />
-                       <br />
-                    </div>
-     
-                    <div class="card__data">
-                       <h3 class="card__name">Usa transporte sostenible</h3>
-                       <p class="card__description">
-                        Opta por caminar, usar la bicicleta o el transporte público en lugar de conducir un coche. 
-                        Esto ayuda a reducir las emisiones de gases de efecto invernadero.
-                       </p>
-     
-                       
-                    </div>
-                 </article>
-     
-                 <article class="card__article swiper-slide">
-                    <div class="card__image">
-                       <img src="assets/img/product.png" alt="image" class="card__img">
-                       <div class="card__shadow"></div>
-                       <br />
-                    </div>
-     
-                    <div class="card__data">
-                       <h3 class="card__name">Consume productos ecológicos</h3>
-                       <p class="card__description">
-                        Compra productos con certificación ecológica y evita los plásticos de un solo uso. 
-                         </p>
-     
-                       
-                    </div>
-                 </article>
+        </a>
+        <a href="plan.html" id="plan">
+        <img src="img/plan.png" alt="Plan 2030 de la ONU">
+          </a>
+        <a href="game.html" id="quiz">
 
-                 <article class="card__article swiper-slide">
-                    <div class="card__image">
-                       <img src="assets/img/water.png" alt="image" class="card__img">
-                       <div class="card__shadow"></div>
-                       <br/>
-                       <br />
-                    </div>
-     
-                    <div class="card__data">
-                       <h3 class="card__name">Ahorra agua</h3>
-                       <p class="card__description">
-                        Cierra los grifos mientras te cepillas los dientes, 
-                        toma duchas más cortas y reutiliza el agua cuando sea posible.
-                       </p>
-     
-                      
-                    </div>
-                 </article>
+          <img src="img/quiz.png" alt="Preguntas Frecuentes">
+        </a>
+        <a href="faq.html" id="faq">
+
+            <img src="img/faq.png" alt="Quiz">
+          </a>
+    </nav>
+  </header>
+      
+
+      <div class="content">
+        <!-- Tipos de Energía -->
+        <section id="tipos-energia" class="section">
+          <h2>Tipos de Energía</h2>
+          <hr>
+          <div class="section-grid">
+            <div>
+              
+              <p><strong>Energía Solar:</strong> Se obtiene del sol mediante paneles solares y es una de las más limpias y renovables.</p>
+              <img src="img/solar.jpg" alt="Energía Solar">
+            </div>
+            <div>
+              
+              <p><strong>Energía Eólica:</strong> Utiliza el viento para generar electricidad mediante aerogeneradores.</p>
+              <img src="img/eolica.jpg" alt="Energía Eólica">
+            </div>
+            <div>
+              
+              <p><strong>Energía Hidráulica:</strong> Aprovecha la fuerza del agua para producir energía eléctrica.</p>
+              <img src="img/hidraulica.jpg" alt="Energía Hidráulica">
+            </div>
+            <div>
+              
+                <p><strong>Biomasa:</strong> Genera energía a partir de procesos como la combustión de materia orgánica.</p>
+                <img src="img/biomasa.jpg" alt="Biomasa">
               </div>
-           </div>
+          </div>
+        </section>
+      
+        <!-- Emisiones de CO2 -->
+        <section id="emisiones" class="section">
+          <h2>Emisiones de CO₂</h2>
+          <hr>
+          <img src="img/emisiones.jpg" alt="Emisiones de CO2">
+          <p>
+            Las fuentes de energía fósil (carbón, petróleo y gas natural) son responsables de más del 75% de las emisiones de gases de efecto invernadero a nivel global. 
+            Esto tiene un impacto significativo en el cambio climático y requiere una transición urgente hacia fuentes renovables.
+          </p>
+        </section>
+      
+        <!-- Plan 2030 ONU -->
+        <section id="plan-onu" class="section">
+          <h2>Plan 2030 de la ONU</h2>
+            <hr >
+          <p>
+            La ONU, a través de los Objetivos de Desarrollo Sostenible (ODS), promueve que para el 2030 al menos el 50% de la energía mundial provenga de fuentes renovables. 
+            Este plan busca garantizar el acceso a energía limpia y asequible para todos, reducir las emisiones y fomentar la sostenibilidad global.
+          </p>
+          <img src="IMG/ONU.jpg" alt="Plan 2030 de la ONU">
+        </section>
+      
 
-           <!-- Navigation buttons -->
-           <div class="swiper-button-next">
-              <i class="ri-arrow-right-s-line"></i>
-           </div>
+        <section id="biodiversidad" class="section">
+            <h2>Biodiversidad</h2>
+            <hr >
+            <img src="img/biodiversidad.jpeg" alt="Biodiversidad">
+            <p>La biodiversidad se refiere a la variedad de formas de vida que existen en la Tierra, incluyendo la diversidad de especies, genes y ecosistemas. Esta riqueza biológica es esencial para el equilibrio y la salud de nuestro planeta, ya que cada especie juega un papel único en su ecosistema, contribuyendo a procesos como la polinización, la descomposición de materia orgánica, la regulación del clima y la purificación del agua.</p>
+          </section>
+        
+          <section id="reciclaje" class="section">
+            <h2>Reciclaje</h2>
+            <hr >
+            
+            <p>El reciclaje es el proceso de convertir materiales desechados en nuevos productos para evitar el desperdicio de recursos útiles, reducir el consumo de materias primas frescas, disminuir el uso de energía y reducir la contaminación del aire y del agua. Este proceso es fundamental para la sostenibilidad ambiental y la conservación de los recursos naturales.</p>
+            <img src="img/reciclaje.jpg" alt="Reciclaje">
+          </section>
+        
+          <section id="ahorro-agua" class="section">
+            <h2>Ahorro de Agua</h2>
+            <hr >
            
-           <div class="swiper-button-prev">
-              <i class="ri-arrow-left-s-line"></i>
-           </div>
+            <p>El agua es un recurso esencial para la vida en la Tierra. Sin embargo, a pesar de su importancia, muchas regiones del mundo enfrentan escasez de agua debido al uso excesivo, la contaminación y el cambio climático. El ahorro de agua no solo es crucial para garantizar el suministro de este recurso vital, sino también para proteger el medio ambiente y promover la sostenibilidad.</p>
+            <img src="img/agua.jpg" alt="Ahorro de Agua">
+          </section>
+        
+          <section id="contaminacion-plastica" class="section">
+            <h2>Contaminación Plástica</h2>
+            <hr >
+           
+            <p>La contaminación plástica es uno de los problemas ambientales más graves que enfrenta nuestro planeta. Cada año, millones de toneladas de plástico terminan en los océanos, ríos y otros ecosistemas, causando daños significativos a la vida silvestre, los hábitats naturales y la salud humana.</p>
+            <img src="img/contPlastica.jpeg" alt="Contaminación Plástica">
+          </section>
+        
 
-           <!-- Pagination -->
-           <div class="swiper-pagination"></div>
-        </div>
-     </section>
+        <section id="noticias" class="section">
+            <h2>Últimas Noticias sobre Energías Renovables</h2>
+            <hr >
+            <div class="section-grid">
+              <div>
+                <img src="img/noticia1.jpg" alt="Noticia 1">
+                <p><strong>Titular:</strong> Ministerio de Energía y Minas busca colaboración para la transición energética. <a href="https://www.diariolibre.com/economia/energia/2024/11/24/ministerio-de-energia-y-minas-trabaja-en-transicion-energetica/2921632">Leer más</a></p>
+              </div>
+              <div>
+                <img src="img/noticia2.jpeg" alt="Noticia 2">
+                <p><strong>Titular:</strong> El dilema que enfrenta España por producir demasiada electricidad con energías renovables. <a href="https://www.bbc.com/mundo/articles/c722y5k2k6wo">Leer más</a></p>
+              </div>
+              <div>
+                <img src="img/noticia3.jpeg" alt="Noticia 3">
+                <p><strong>Titular:</strong> Para 2023, Colombia perdió seis puntos en el Índice de Transición Energética del FEM. <a href="https://www.larepublica.co/especiales/acelerando-la-transicion-energetica/colombia-en-el-indice-de-transicion-energetica-del-fem-3849228">Leer más</a></p>
+              </div>
+              <div>
+                <img src="img/noticia4.jpeg" alt="Noticia 4">
+                <p><strong>Titular:</strong> Energías renovables reciben 40 veces menos subsidios que los combustibles fósiles. <a href="https://www.diariolibre.com/economia/energia/2024/11/24/ministerio-de-energia-y-minas-trabaja-en-transicion-energetica/2921632">Leer más</a></p>
+              </div>
+              <div>
+                <img src="img/noticia5.jpeg" alt="Noticia 5">
+                <p><strong>Titular:</strong> Sólo 1% de empresas industriales opta por energía solar: Niko. <a href="https://www.milenio.com/negocios/solo-1-de-empresas-industriales-opta-por-la-energia-solar-niko">Leer más</a></p>
+              </div>
+              <div>
+                <img src="img/noticia6.jpeg" alt="Noticia 6">
+                <p><strong>Titular:</strong> Bachoco instalará paneles de energía verde en sus instalaciones y centros de distribución. <a href="https://www.milenio.com/negocios/bachoco-paneles-de-energia-verde-en-instalaciones-centro-distribucion">Leer más</a></p>
+              </div>
+              <div>
+                <img src="img/noticia7.jpeg" alt="Noticia 7">
+                <p><strong>Titular:</strong> La empresa española de energías limpias y agua, Cox, cae en su debut bursátil el viernes. <a href="https://www.larepublica.co/globoeconomia/la-empresa-espanola-de-energias-limpias-y-agua-cox-cae-en-su-debut-bursatil-el-viernes-3999731">Leer más</a></p>
+              </div>
+              <div>
+                <img src="img/noticia8.jpeg" alt="Noticia 8">
+                <p><strong>Titular:</strong> La transición energética acelera el proceso de fusiones y adquisiciones de empresas en Argentina. <a href="https://www.ambito.com/negocios/la-transicion-energetica-acelera-el-proceso-fusiones-y-adquisiciones-empresas-argentina-n6072879">Leer más</a></p>
+              </div>
+            </div>
+          </section>
 
-     <div class="introductions">
-      
-      <div class="introduction">
-         Actualmente, utilizamos una gran variedad de fuentes de energía, de las cuales provienen de combustibles fósiles (no son renovables), es una situación que está acelerando el cambio climático. El problema con los combustibles fósiles es que genera una gran emisión de gases de efecto invernadero, con esto se generan numerosos problemas ambientales significativos. Esta emisión de gases puede reducirse si se da mayor importancia al tema ambiental. Sin embargo, muchas personas no son conscientes de los impactos ambientales que provoca el uso de combustibles fósiles como fuente de energía o gasolina para el transporte, la falta de conocimiento sobre estos impactos es muy peligrosa. 
-      </div>
-      <div class ="intimg">
-         <img src="assets/img/introduction.jpg" class="intimg">
-      </div>
-      
-     </div>
 
-     <div class="container_form">
-      <h1>Calculadora de Huella de Carbono</h1>
-      <form id="carbonFootprintForm">
-          <label for="electricity">1. Consumo de electricidad (kWh):</label>
-          <input type="number" id="electricity" required>
-
-          <label for="gas">2. Consumo de gas (m³):</label>
-          <input type="number" id="gas" required>
-
-          <label for="miles">3. Millas recorridas en coche:</label>
-          <input type="number" id="miles" required>
-
-          <label for="flights">4. Número de vuelos nacionales al año:</label>
-          <input type="number" id="flights" required>
-
-          <label for="meat">5. Consumo de carne (kg/mes):</label>
-          <input type="number" id="meat" required>
-
-          <label for="dairy">6. Consumo de productos lácteos (kg/mes):</label>
-          <input type="number" id="dairy" required>
-
-          <label for="waste">7. Residuos generados (kg/mes):</label>
-          <input type="number" id="waste" required>
-
-          <label for="water">8. Consumo de agua (litros/mes):</label>
-          <input type="number" id="water" required>
-
-          <label for="publicTransport">9. Uso de transporte público (días/mes):</label>
-          <input type="number" id="publicTransport" required>
-
-          <label for="recycling">10. Porcentaje de reciclaje (%):</label>
-          <input type="number" id="recycling" required>
-
-          <button type="submit">Calcular Huella de Carbono</button>
-      </form>
-
-      <div id="result" class="result"></div>
-      <div id="tip" class="tip"></div>
       </div>
 
-      <br />
-      <h2 style="text-align: center;">Tipos de Energías Renovables</h2>
-      <br />
-      <main>
-         <section class="energy-type">
-             <h2>Energía Solar</h2>
-             <p>La energía solar se obtiene a partir de la radiación solar. Se puede utilizar para generar electricidad o para calentar agua.</p>
-         </section>
-         <section class="energy-type">
-             <h2>Energía Eólica</h2>
-             <p>La energía eólica se genera a partir del viento. Los aerogeneradores convierten la energía cinética del viento en energía eléctrica.</p>
-         </section>
-         <section class="energy-type">
-             <h2>Energía Hidroeléctrica</h2>
-             <p>La energía hidroeléctrica se produce aprovechando la energía del agua en movimiento, como ríos o presas, para generar electricidad.</p>
-         </section>
-         <section class="energy-type">
-             <h2>Energía Geotérmica</h2>
-             <p>La energía geotérmica se obtiene del calor interno de la Tierra. Se utiliza para generar electricidad y para calefacción.</p>
-         </section>
-         <section class="energy-type">
-             <h2>Energía Biomasa</h2>
-             <p>La biomasa se refiere a la materia orgánica que se puede utilizar como fuente de energía, como residuos agrícolas y forestales.</p>
-         </section>
-     </main>
-     <br /> 
-
-      <div class="container_energyform">
-         <h1>Formulario sobre Energías No Renovables</h1>
-         <form id="energyForm">
-             <label for="electricitySource">1. ¿Cuál es tu principal fuente de electricidad?</label>
-             <select id="electricitySource" required>
-                 <option value="renewable">Energías renovables (solar, eólica, etc.)</option>
-                 <option value="fossil">Fósiles (carbón, gas, petróleo)</option>
-                 <option value="nuclear">Nuclear</option>
-             </select>
- 
-             <label for="transportation">2. ¿Qué tipo de transporte usas principalmente?</label>
-             <select id="transportation" required>
-                 <option value="public">Transporte público</option>
-                 <option value="car">Coche particular</option>
-                 <option value="bike">Bicicleta</option>
-                 <option value="none">No uso transporte</option>
-             </select>
- 
-             <label for="heating">3. ¿Qué tipo de calefacción utilizas en casa?</label>
-             <select id="heating" required>
-                 <option value="renewable">Calefacción renovable (biomasa, solar térmica)</option>
-                 <option value="fossil">Calefacción fósil (gas, petróleo)</option>
-                 <option value="electric">Eléctrica (sin especificar fuente)</option>
-             </select>
- 
-             <label for="appliances">4. ¿Qué tipo de electrodomésticos utilizas?</label>
-             <select id="appliances" required>
-                 <option value="efficient">Eficientes (etiqueta A o superior)</option>
-                 <option value="standard">Estándar</option>
-                 <option value="old">Antiguos</option>
-             </select>
- 
-             <button type="submit">Calcular</button>
-         </form>
- 
-         <div id="result_energy" class="result_energy"></div>
-         <div id="cal" class="cal"></div>
-     </div>
-     
-     <!--=============== SWIPER JS ===============-->
-     <script src="assets/js/swiper-bundle.min.js"></script>
-
-     <!--=============== MAIN JS ===============-->
-     <script src="assets/js/main.js"></script>
-
+       <script src="index.js"></script>
+       <footer>
+        Juan José Hernández.
+      </footer>
 </body>
-
-
 </html>

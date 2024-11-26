@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas sobre Energía Renovable</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            background-color: #9bc08d;
+          }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .quiz-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .answers label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #results {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2d6a4f;
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          }
+          
+          header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            
+            display: flex;
+            font-family:cursive;
+          }
+          
+          .logo{
+            
+            width: 35px;
+          
+          }
+          
+          nav {
+            display: flex;
+            gap: 15px;
+          }
+          
+          nav a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+          }
+          
+          nav a:hover {
+            color: #95d5b2;
+          }
+
+          .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+          }
+          
+          .menu-toggle div {
+            background-color: white;
+            height: 3px;
+            width: 25px;
+            margin: 4px 0;
+          }
+
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 15px;
+                width: 80%;
+            }
+
+            button {
+                padding: 8px 16px;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #2d6a4f;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                width: 200px;
+                padding: 10px;
+                border-radius: 5px;
+              }
+            
+              nav.active {
+                display: flex;
+              }
+            
+              .menu-toggle {
+                display: flex;
+              }
+            
+        }
+
+        #menu img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" >REN<img class="logo" src="img/logo.png">VABLE </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav id="menu">
+            <a href="index.html" id="inicio">
+            <img src="img/home.png" alt="Inicio">
+            </a>
+            <a href="calculadora.html" id="calculadora">  
+              <img src="img/calculadora.png" alt="Calculadora de CO2">
+
+            </a>
+            <a href="plan.html" id="plan">
+            <img src="img/plan.png" alt="Plan 2030 de la ONU">
+              </a>
+            <a href="#" id="quiz1">
+
+              <img src="img/quiz.png" alt="Preguntas Frecuentes">
+            </a>
+            <a href="faq.html" id="faq">
+
+                <img src="img/faq.png" alt="Quiz">
+              </a>
+        </nav>
+      </header>
+
+    
+    <div class="quiz-container">  
+        <h1>Preguntas sobre Energía Renovable</h1> 
+        <hr> <form id="quiz"> 
+            <div class="question"> 
+                <p>¿Cuál de las siguientes es una fuente de energía renovable?</p> 
+                <div class="answers"> 
+                    <label>
+                        <input type="radio" name="question0" value="a"> Carbón
+                    </label> 
+                    <label>
+                        <input type="radio" name="question0" value="b"> Petróleo
+                    </label> 
+                    <label>
+                        <input type="radio" name="question0" value="c"> Energía Solar
+                    </label> 
+                </div> 
+            </div> 
+            <div class="question"> 
+                <p>¿Qué porcentaje de la energía mundial proviene de fuentes renovables?</p> 
+                <div class="answers"> 
+                    <label>
+                        <input type="radio" name="question1" value="a"> 10%
+                    </label> 
+                    <label>
+                        <input type="radio" name="question1" value="b"> 25%</label> 
+                        <label>
+                            <input type="radio" name="question1" value="c"> 50%
+                        </label> 
+                    </div> 
+                </div> 
+                <div class="question"> 
+                    <p>¿Cuál es el principal beneficio de la energía eólica?</p> 
+                    <div class="answers"> 
+                        <label><input type="radio" name="question2" value="a"> Es barata
+                    </label> 
+                    <label>
+                        <input type="radio" name="question2" value="b"> No produce emisiones de gases de efecto invernadero</label>
+                         <label>
+                            <input type="radio" name="question2" value="c"> Es fácil de almacenar</label>
+                         </div> </div> <div class="question"> <p>¿Qué tipo de energía se obtiene del calor interno de la Tierra?</p> <div class="answers"> <label><input type="radio" name="question3" value="a"> Energía Solar</label> <label><input type="radio" name="question3" value="b"> Energía Geotérmica</label> <label><input type="radio" name="question3" value="c"> Energía Hidroeléctrica</label> </div> </div> <div class="question"> <p>¿Cuál de las siguientes no es una fuente de energía renovable?</p> <div class="answers"> <label><input type="radio" name="question4" value="a"> Biomasa</label> <label><input type="radio" name="question4" value="b"> Gas Natural</label> <label><input type="radio" name="question4" value="c"> Energía Hidroeléctrica</label> </div> </div> <div class="question"> <p>¿Cuál es una ventaja de la energía solar?</p> <div class="answers"> <label><input type="radio" name="question5" value="a"> Es inagotable</label> <label><input type="radio" name="question5" value="b"> Es costosa</label> <label><input type="radio" name="question5" value="c"> Produce residuos tóxicos</label> </div> </div> <div class="question"> <p>¿Qué tipo de energía se obtiene del movimiento del agua?</p> <div class="answers"> <label><input type="radio" name="question6" value="a"> Energía Eólica</label> <label><input type="radio" name="question6" value="b"> Energía Hidroeléctrica</label> <label><input type="radio" name="question6" value="c"> Energía Solar</label> </div> </div> <div class="question"> <p>¿Cuál de las siguientes es una desventaja de la energía nuclear?</p> <div class="answers"> <label><input type="radio" name="question7" value="a"> Produce grandes cantidades de CO2</label> <label><input type="radio" name="question7" value="b"> Genera residuos radiactivos</label> <label><input type="radio" name="question7" value="c"> Es una fuente de energía renovable</label> </div> </div> </form> <button id="submit">Enviar Respuestas</button> <div id="results"></div> </div>
+    <script>
+        (function() { const quizContainer = document.getElementById('quiz'); const resultsContainer = document.getElementById('results'); const submitButton = document.getElementById('submit'); const myQuestions = [ { correctAnswer: "c" }, { correctAnswer: "b" }, { correctAnswer: "b" }, { correctAnswer: "b" }, { correctAnswer: "b" }, { correctAnswer: "a" }, { correctAnswer: "b" }, { correctAnswer: "b" } ]; function showResults() { const answerContainers = quizContainer.querySelectorAll('.answers'); let numCorrect = 0; myQuestions.forEach((currentQuestion, questionNumber) => { const answerContainer = answerContainers[questionNumber]; const selector = `input[name=question${questionNumber}]:checked`; const userAnswer = (answerContainer.querySelector(selector) || {}).value; if (userAnswer === currentQuestion.correctAnswer) { numCorrect++; answerContainers[questionNumber].style.color = 'green'; } else { answerContainers[questionNumber].style.color = 'red'; } }); resultsContainer.innerHTML = `${numCorrect} de ${myQuestions.length} correctas`; } submitButton.addEventListener('click', showResults); })();
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            document.getElementById('inicio').innerHTML = "Inicio";
+            document.getElementById('plan').innerHTML = "Plan a Futuro";
+            document.getElementById('calculadora').innerHTML = "Calculadora de CO₂";
+            document.getElementById('faq').innerHTML = "Preguntas Frecuentes";
+            document.getElementById('quiz1').innerHTML = "Quiz";
+            menu.classList.toggle('active');
+          }
+        
+        
+    </script>
+</body>
+</html>
